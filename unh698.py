@@ -1,9 +1,9 @@
-From flask import Flask
+from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
 
-def test_client():
+def hello_world_fml():
     return 'Flask Dockerized'
 
 if __name__ == '__main__':
