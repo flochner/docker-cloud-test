@@ -16,11 +16,12 @@ RUN apt-get update && \
     python3-setuptools \
     python3-pip 
 
+ENV DEBIAN_FRONTEND teletype
+
 RUN pip3 install --upgrade pip
 
 RUN pip3 install -r requirements.txt
 
-ENTRYPOINT ["python3"]
-CMD ["unh698_test.py"]
+#ENTRYPOINT ["python3"]
+#CMD ["unh698_test.py"]
 
-ENV DEBIAN_FRONTEND=teletype
