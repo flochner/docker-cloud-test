@@ -1,15 +1,19 @@
 FROM ubuntu:xenial 
 
-WORKDIR /src
-
-COPY . /src
-
 RUN apt-get update && \
+    apt-get upgrade -y && \
     apt-get install -y \
-    apt-utils
+    apt-utils 
 
 RUN apt-get install -y \
-    python3-dev \
-    python3-pip
+    build-essential \
+    perl \
+    python3-pip 
 
-RUN pip3 install flask
+WORKDIR /src
+COPY . /src
+
+RUN pip3 install --upgrade pip
+
+RUN pip3 install Flask==0.12
+
