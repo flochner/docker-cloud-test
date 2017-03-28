@@ -12,6 +12,8 @@ RUN apt-get update && \
     build-essential \
     perl \
     python3-dev \
+    python3 \
+    python3-setuptools \
     python3-pip 
 
 RUN pip3 install --upgrade pip
