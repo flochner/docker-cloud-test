@@ -3,11 +3,11 @@ FROM ubuntu:xenial
 WORKDIR /app
 COPY . /app
 
-# ARG DEBIAN_FRONTEND=noninteractive
+ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && \
     apt-get upgrade -y && \
-    apt-get install -y --no-install-recommends \
+    apt-get install -y \
     apt-utils \
     build-essential \
     perl \
@@ -23,4 +23,4 @@ RUN pip3 install -r requirements.txt
 ENTRYPOINT ["python3"]
 CMD ["app.py"]
 
-# ARG DEBIAN_FRONTEND=newt
+ENV DEBIAN_FRONTEND=newt
