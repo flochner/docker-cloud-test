@@ -20,3 +20,4 @@ RUN pip3 install Flask==0.12
 WORKDIR /src
 COPY . /src
 EXPOSE 5000
+
