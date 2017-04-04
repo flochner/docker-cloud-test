@@ -1,8 +1,5 @@
 FROM ubuntu:xenial 
 
-WORKDIR /src
-COPY . /src
-
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
@@ -18,6 +15,7 @@ RUN apt-get update && \
 ENV DEBIAN_FRONTEND=teletype
 
 RUN pip3 install --upgrade pip
-
 RUN pip3 install Flask==0.12
 
+WORKDIR /src
+COPY . /src
