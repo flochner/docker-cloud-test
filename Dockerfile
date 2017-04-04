@@ -17,6 +17,9 @@ ENV DEBIAN_FRONTEND=teletype
 RUN pip3 install --upgrade pip
 RUN pip3 install Flask==0.12
 
+RUN apt-get install -y \
+    net-tools
+
 WORKDIR /src
 COPY . /src
 EXPOSE 5000
