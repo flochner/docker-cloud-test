@@ -10,18 +10,16 @@ RUN apt-get update && \
     python3 \
     python3-dev \
     python3-setuptools \
-    python3-pip 
+    python3-pip \
+    net-tools \
+    curl \
+    sudo \
+    nano
 
 ENV DEBIAN_FRONTEND=teletype
 
 RUN pip3 install --upgrade pip
 RUN pip3 install Flask==0.12
-
-RUN apt-get install -y \
-    net-tools \
-    curl \
-    sudo \
-    nano
 
 WORKDIR /src
 COPY . /src
