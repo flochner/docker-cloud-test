@@ -4,7 +4,9 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
     apt-get install -y \
-    apt-utils \
+    apt-utils
+
+RUN apt-get install -y \
     build-essential \
     perl \
     python3 \
