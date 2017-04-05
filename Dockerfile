@@ -18,10 +18,14 @@ RUN pip3 install --upgrade pip
 RUN pip3 install Flask==0.12
 
 RUN apt-get install -y \
-    net-tools
+    net-tools \
+    curl \
+    sudo \
+    nano
 
 WORKDIR /src
 COPY . /src
-EXPOSE 5000
 
+CMD ["python3", "unh698.py"]
+EXPOSE 5000
 
