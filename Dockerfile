@@ -13,10 +13,6 @@ RUN apt-get install -y \
     python3-dev \
     python3-setuptools \
     python3-pip \
-    net-tools \
-    curl \
-    sudo \
-    nano
 
 ENV DEBIAN_FRONTEND=teletype
 
