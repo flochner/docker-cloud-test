@@ -19,8 +19,7 @@
     state: started
     ports:
      - "{{ unh698_host_port }}:{{ unh698_container_port }}"
-    interactive: True
-    tty: True
+    tty: true
 
 # This should check that the container that is started in the last step
 # is up and running by checking the localhost's webpage.
