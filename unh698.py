@@ -5,7 +5,11 @@ app = Flask(__name__)
 @app.route('/')
 #@app.route('/<name>')
 def main():
-    return "UNH698 Website"
+    return render_template('main.html')
+    
+@app.route('/SpeedRacer')
+def speed():
+    return 'Speed Racer\n'
     
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0')
