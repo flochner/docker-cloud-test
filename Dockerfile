@@ -22,6 +22,5 @@ RUN pip3 install Flask==0.12
 WORKDIR /src
 COPY . /src
 
-CMD ["python3", "unh698.py"]
 EXPOSE 5000
 
