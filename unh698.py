@@ -3,13 +3,13 @@ from flask import render_template
 app = Flask(__name__)
 
 @app.route('/')
-#@app.route('/<name>')
 def main():
     return render_template('main.html')
     
 @app.route('/SpeedRacer')
 def speed():
-    return 'Speed Racer\n'
+    return render_template('SpeedRacer/main.html')
     
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0')
+ 
