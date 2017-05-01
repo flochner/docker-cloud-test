@@ -16,11 +16,11 @@ RUN apt-get install -y \
 
 ENV DEBIAN_FRONTEND=teletype
 
-RUN pip3 install --upgrade pip
-RUN pip3 install -r requirements.pip
-
 WORKDIR /src
 COPY . /src
+
+RUN pip3 install --upgrade pip
+RUN pip3 install -r requirements.pip
 
 EXPOSE 5000
 
