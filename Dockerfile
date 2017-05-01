@@ -17,7 +17,7 @@ RUN apt-get install -y \
 ENV DEBIAN_FRONTEND=teletype
 
 RUN pip3 install --upgrade pip
-RUN pip3 install Flask==0.12
+RUN pip3 install -r requirements.pip
 
 WORKDIR /src
 COPY . /src
